@@ -7,7 +7,6 @@ like a study companion rather than a one-shot search box.
 
 **100% free stack** — no paid APIs, no credit card required.
 
-**Live demo:** _add your Streamlit Cloud link here after deploying_
 
 ## What this does
 
