@@ -30,7 +30,7 @@ what you've discussed.
 | Session memory | SQLite | Free |
 | UI | Streamlit | Free |
 
-## Setup
+## How to Run
 
 1. Get a free Gemini API key at [aistudio.google.com](https://aistudio.google.com).
 2. Clone this repo and install dependencies:
