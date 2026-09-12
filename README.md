@@ -22,7 +22,7 @@ what you've discussed.
 
 | Layer | Tool | Cost |
 |---|---|---|
-| Answering / handwriting OCR / quiz generation | Gemini API (`gemini-2.0-flash`) | Free tier |
+| Answering / handwriting OCR / quiz generation | Gemini API (`gemini-3.6-flash`) | Free tier |
 | Embeddings | Sentence Transformers (`bge-large-en-v1.5`), local | Free |
 | Vector database | ChromaDB, local | Free |
 | PDF parsing | PyMuPDF | Free |
