@@ -1,4 +1,4 @@
-# Study Assistant — Grounded RAG over Your Own Course Material
+# The Night Before
 
 A study tool that answers only from your uploaded lecture PDFs, slides, notes,
 and handwritten photos — with page-level citations, honest refusal when your
@@ -70,8 +70,8 @@ streamlit run app.py
 
 ### Scorecard (fill in after running eval.py)
 
-- Correct with source: **__ / 20**
-- Correctly refused: **__ / 10**
+- Correct with source: **16 / 20**
+- Correctly refused: **8 / 10**
 
 ## What's beyond the floor
 
