@@ -1,4 +1,4 @@
-# Study Assistant — Grounded RAG over Your Own Course Material
+# The Night Before
 
 A study tool that answers only from your uploaded lecture PDFs, slides, notes,
 and handwritten photos — with page-level citations, honest refusal when your
