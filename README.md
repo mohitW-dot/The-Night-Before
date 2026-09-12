@@ -86,25 +86,59 @@ streamlit run app.py
 
 _(fill these in after running `eval.py` on your real corpus)_
 
-## Architecture
+Architecture
 
-corpus/ (PDFs, slides, handwritten photos, notes)
-│
-▼
-ingest.py ──► data/chunks.json (text extraction + OCR + visual description)
-│
-▼
-index.py ──► data/chroma_db/ (local embeddings)
-│
-▼
-retrieve.py ◄──► app.py (Streamlit UI)
-│ │
-▼ ▼
-Gemini API memory.py / data/memory.db (session log, coverage, quiz source)
-│
-▼
-eval.py ──► eval/results.json (scorecard)
-
+corpus/
+(PDFs, slides, handwritten photos, notes)
+        │
+        ▼
+   ingest.py
+        │
+        ├── Text extraction
+        ├── Handwriting OCR
+        └── Visual description
+        │
+        ▼
+data/chunks.json
+        │
+        ▼
+    index.py
+        │
+        └── Local embeddings
+        │
+        ▼
+data/chroma_db/
+        │
+        │
+        ▼
+   retrieve.py ◄──────────► app.py
+        │                    │
+        │                    └── Streamlit UI
+        │
+        ▼
+   Relevant Context
+        │
+        ▼
+   Gemini API
+        │
+        ├──────────────► Answer + Citations
+        │
+        └──────────────► Grounded Quiz
+        │
+        ▼
+ memory.py
+        │
+        ▼
+data/memory.db
+(Session memory, coverage, quiz source)
+        
+        │
+        ▼
+     eval.py
+        │
+        ▼
+eval/results.json
+(Accuracy + refusal scorecard)
 
 ## What's beyond the floor
 
