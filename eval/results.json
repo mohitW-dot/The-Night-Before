@@ -1,0 +1,311 @@
+{
+  "summary": {
+    "correct_with_source": 0,
+    "total_answerable": 0,
+    "correctly_refused": 8,
+    "total_unanswerable": 8,
+    "api_errors": 22
+  },
+  "details": [
+    {
+      "id": 1,
+      "question": "What is Computational Fluid Dynamics (CFD), and which two physical phenomena does it primarily simulate?",
+      "type": "single_doc",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 49.013937823s.",
+      "correct": false
+    },
+    {
+      "id": 2,
+      "question": "List the three main phases of a CFD simulation and one key task performed in each phase.",
+      "type": "single_doc",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 31.992700359s.",
+      "correct": false
+    },
+    {
+      "id": 3,
+      "question": "State the Reynolds number equation and explain how laminar and turbulent flow are classified.",
+      "type": "single_doc",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 15.540392524s.",
+      "correct": false
+    },
+    {
+      "id": 4,
+      "question": "Write the general transport equation and identify its transient, advective, source, and diffusion terms.",
+      "type": "single_doc",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 58.015190019s.",
+      "correct": false
+    },
+    {
+      "id": 5,
+      "question": "Write the mass conservation equation in differential form and define the velocity components u, v, and w.",
+      "type": "single_doc",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 40.633088483s.",
+      "correct": false
+    },
+    {
+      "id": 6,
+      "question": "Derive the central difference formula for the first-order derivative using Taylor series expansion.",
+      "type": "single_doc",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 23.665702287s.",
+      "correct": false
+    },
+    {
+      "id": 7,
+      "question": "Write the finite difference equation for the second-order derivative in one-dimensional space.",
+      "type": "single_doc",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 6.132878s.",
+      "correct": false
+    },
+    {
+      "id": 8,
+      "question": "According to the handwritten notes, classify second-order PDEs using the discriminant method and define elliptic, parabolic, and hyperbolic equations.",
+      "type": "single_doc",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 49.5143637s.",
+      "correct": false
+    },
+    {
+      "id": 9,
+      "question": "Using the handwritten notes, explain the eigenvalue approach for classifying second-order PDEs.",
+      "type": "single_doc",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 31.695114544s.",
+      "correct": false
+    },
+    {
+      "id": 10,
+      "question": "State the governing equation and boundary conditions for one-dimensional steady-state heat conduction with a uniform heat source.",
+      "type": "single_doc",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 13.9525381s.",
+      "correct": false
+    },
+    {
+      "id": 11,
+      "question": "Explain how Reynolds number is used during CFD pre-processing to select the appropriate physical flow model.",
+      "type": "cross_doc",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 56.586594614s.",
+      "correct": false
+    },
+    {
+      "id": 12,
+      "question": "Describe the complete CFD workflow from geometry creation to visualization, and explain how the solver converts governing PDEs into algebraic equations.",
+      "type": "cross_doc",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 40.088885804s.",
+      "correct": false
+    },
+    {
+      "id": 13,
+      "question": "Compare the discriminant method and the eigenvalue method for classifying second-order PDEs.",
+      "type": "cross_doc",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 22.643594556s.",
+      "correct": false
+    },
+    {
+      "id": 14,
+      "question": "Explain how the EulerTricomi equation changes from hyperbolic to elliptic form, using both discriminant and eigenvalue interpretations.",
+      "type": "cross_doc",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 5.08133866s.",
+      "correct": false
+    },
+    {
+      "id": 15,
+      "question": "Describe the derivation of the central difference formula from Taylor series and show how it is applied to discretize a second-order derivative.",
+      "type": "cross_doc",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 48.177547357s.",
+      "correct": false
+    },
+    {
+      "id": 16,
+      "question": "Explain the difference between forward, backward, and central difference schemes, and identify which scheme is used for discretizing the heat conduction equation.",
+      "type": "cross_doc",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 31.52517382s.",
+      "correct": false
+    },
+    {
+      "id": 17,
+      "question": "Formulate the finite difference equations for one-dimensional steady-state heat conduction and explain how they are solved using Gauss elimination.",
+      "type": "cross_doc",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 14.362915014s.",
+      "correct": false
+    },
+    {
+      "id": 18,
+      "question": "Compare Gauss-Seidel and Gauss Elimination methods, highlighting the iterative and direct solution procedures.",
+      "type": "cross_doc",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 57.053692373s.",
+      "correct": false
+    },
+    {
+      "id": 19,
+      "question": "Explain how boundary conditions are applied in both the governing differential equations and the finite difference heat conduction formulation.",
+      "type": "cross_doc",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 38.631304046s.",
+      "correct": false
+    },
+    {
+      "id": 20,
+      "question": "Using the handwritten notes and the lecture material, explain how discretization transforms governing PDEs into algebraic equations during CFD analysis.",
+      "type": "cross_doc",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 21.287746351s.",
+      "correct": false
+    },
+    {
+      "id": 21,
+      "question": "Explain the SIMPLE algorithm for pressure velocity coupling in incompressible flow.",
+      "type": "unanswerable",
+      "model_answer": "My materials don't seem to cover this. I couldn't find anything in your documents that answers this confidently -- you may want to check other sources or ask your instructor.",
+      "model_citations": [],
+      "refused": true,
+      "error": null,
+      "correct": true
+    },
+    {
+      "id": 22,
+      "question": "Derive the QUICK differencing scheme used in finite volume methods.",
+      "type": "unanswerable",
+      "model_answer": "My materials don't seem to cover this. I couldn't find anything in your documents that answers this confidently -- you may want to check other sources or ask your instructor.",
+      "model_citations": [],
+      "refused": true,
+      "error": null,
+      "correct": true
+    },
+    {
+      "id": 23,
+      "question": "What is the k-epsilon turbulence model and where is it applied?",
+      "type": "unanswerable",
+      "model_answer": "My materials don't seem to cover this. I couldn't find anything in your documents that answers this confidently -- you may want to check other sources or ask your instructor.",
+      "model_citations": [],
+      "refused": true,
+      "error": null,
+      "correct": true
+    },
+    {
+      "id": 24,
+      "question": "Explain the PISO algorithm and compare it with SIMPLE.",
+      "type": "unanswerable",
+      "model_answer": "My materials don't seem to cover this. I couldn't find anything in your documents that answers this confidently -- you may want to check other sources or ask your instructor.",
+      "model_citations": [],
+      "refused": true,
+      "error": null,
+      "correct": true
+    },
+    {
+      "id": 25,
+      "question": "Derive the Navier Stokes equation in cylindrical coordinates.",
+      "type": "unanswerable",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 3.691662753s.",
+      "correct": false
+    },
+    {
+      "id": 26,
+      "question": "Explain the finite volume method and compare it with the finite difference method.",
+      "type": "unanswerable",
+      "model_answer": "Gemini is temporarily unavailable due to high demand. Please try your question again in a moment.",
+      "model_citations": [],
+      "refused": false,
+      "error": "Gemini API 429: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash\nPlease retry in 46.129617278s.",
+      "correct": false
+    },
+    {
+      "id": 27,
+      "question": "What is Large Eddy Simulation (LES), and how does it differ from DNS?",
+      "type": "unanswerable",
+      "model_answer": "My materials don't seem to cover this. I couldn't find anything in your documents that answers this confidently -- you may want to check other sources or ask your instructor.",
+      "model_citations": [],
+      "refused": true,
+      "error": null,
+      "correct": true
+    },
+    {
+      "id": 28,
+      "question": "Explain the Spalart Allmaras turbulence model and its industrial applications.",
+      "type": "unanswerable",
+      "model_answer": "My materials don't seem to cover this. I couldn't find anything in your documents that answers this confidently -- you may want to check other sources or ask your instructor.",
+      "model_citations": [],
+      "refused": true,
+      "error": null,
+      "correct": true
+    },
+    {
+      "id": 29,
+      "question": "Describe adaptive mesh refinement (AMR) and its advantages in CFD.",
+      "type": "unanswerable",
+      "model_answer": "My materials don't seem to cover this. I couldn't find anything in your documents that answers this confidently -- you may want to check other sources or ask your instructor.",
+      "model_citations": [],
+      "refused": true,
+      "error": null,
+      "correct": true
+    },
+    {
+      "id": 30,
+      "question": "Explain the Volume of Fluid (VOF) method for multiphase flow simulation.",
+      "type": "unanswerable",
+      "model_answer": "My materials don't seem to cover this. I couldn't find anything in your documents that answers this confidently -- you may want to check other sources or ask your instructor.",
+      "model_citations": [],
+      "refused": true,
+      "error": null,
+      "correct": true
+    }
+  ]
+}

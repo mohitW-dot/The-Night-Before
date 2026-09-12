@@ -1,0 +1,400 @@
+Introduction to Computational Fluid 
+
+Introduction
+and
+
+Mathematical
+
+
+Computational fluid dynamics, (abbreviated CFD) studies problems of fluid
+dynamics using numerical methods on a computer. Although the subject fluid
+dynamics is about three centuries old, CED is a relatively new subject. It is
+hardly four decades old, Remarkable success has been achieved in CFD during this,
+time, particularly, in handling nonlinear problems and problems involving complex
+geometries, Computational methods developed in CFD are being increasingly
+applied to other branches of science and engineering. The problems of study in
+CED are often formulated in terms of a partial differential equation or in terms of
+a system of such equations, together with boundary and/or initial conditions. ‘This
+chapter recapitulates the basic concepts of partial differential equations which are
+useful in the subsequent chapters.
+1.1 INTRODUCTION
+Computational fluid dynamics is an extension of classical fluid dynamics,
+originating from the amalgamation of classical fluid dynamics and numerical
+analysis supported by powerful electronic digital computers. ‘Thousands of research
+‘workers, mathematicians, physicists and engineers all over the world contributed
+towards its growth and development and the progress is remarkable. It has created
+an atmosphere of confidence, even to the extent that almost no problem of fluid
+dynamics is now considered unsolvable. The zeal that has been generated in the
+‘minds of research workers and students of fluid dynamics is unparallel.
+“The year 1755 was a decisive year in the development of classical fluid dynamies 21
+‘when Leonhard Euler established the momentum-flux conservation equations for
+an inviscid fluid, now known as Euler's equations, ‘The Navier-Stokes equations
+fora viscous fluid were developed in 1840. Through the development of boundary 598
+layer concept of Prandil (1904), it became possible to unite inviscid and viscous flow
+studies and obtain satisfactory explanation of a karge number of flow phenomena.
+Approximate methods were employed and the results obtained were found to
+be qualitatively correct and often showed excellent agreement with experimental A
+results, Frequently, expansion procedures in terms of certain small parameters were
+used to simplify the governing equations, which were then solved approximately.
+No general procedures for solving nonlinear problems were available, and in the
+language of von Karman (1941) “engineer grapples with nonlinear problems”. The v
+scene totally changed through the advent of electronic digital computers: when
+powerful numerical methods like finite difference, finite element and their variants,
+‘were developed which could deal with nonlinear problems effectively
+CED, is a subject developed recently, almost simultaneously with electronic Q
+digital computers. Foundations of finite difference method for partial differential
+Q
+
+Introduction and Mathematical Preliminaries s
+equations was laid by Courant et al. (1928) in a celebrated paper for studying
+existence and uniqueness of solutions of partial differential equations. Although,
+clearly works on CFD may be traced back to Richardson (1910) and Emmons (1944),
+the systematic study of CFD started in the sixties. During the past 35 years, CFD
+made spectacular progress, and several powerful computational methods have come
+up during this period, the most prominent among them being the finite difference
+method, the finite element method, the finite volume method and the spectral
+method. ‘These methods depend heavily on the use of powerful electronic digital
+computers
+‘The basic equations of inviscid fluid dynamics are the Euler equations, which
+constitute a system of first-order nonlinear partial differential equations. Along,
+with a particular problem of fluid dynamics, certain initial and boundary conditions
+are associated, which are also often nonlinear. For more than two centuries,
+mathematicians and engineers introduced various kinds of approximations leading
+to linearization of the basic equations, Often, the boundary conditions were also
+linearized in order to make the problems tractable. Even for such linearized
+problems, recourse to further approximation had to be taken while solving the
+linearized problems because most frequently no exact analytical method might be
+available,
+‘A primary difference between CFD methods and the approximate methods
+of classical fluid dynamics may be noted. Once a model has been chosen, the
+model equations and boundary and/or initial conditions are solved in CFD by
+numerically exact methods, without introducing any further approximation. The
+only kind of error introduced are the numerical errors for which often numerical 22
+errorestimates or some kind of error bounds are available, By sufficient refinement
+‘of the mesh system, the computed solutions are expected to approach the exact
+solution, This is not true about the above-mentioned approximate methods which 598
+introduce approximations to the model equations and boundary conditions which
+are then solved by approximate methods,
+During the fifties and sixties various computational methods were developed,
+as already mentioned, which aided by an electronic digital computer could A
+successfully reat nonlinear problems, All these methods discretize the problem so
+that a Solvable system of algebraic equations are obtained, the number of equations
+being equal to the number of discrete points in the domain, ‘The resulting algebraic
+system is linear if the original problem is linear, otherwise a system of nonlinear v
+equations is obtained, which is then solved by a standard numerical method on a
+digital computer.
+‘A computer plays a vital role in view of the huge number of arithmetic operations
+involved in a typical fluid flow problem and our desire is to solve such systems in 
+
+6 Introduction to Computational Fluid Dynamics
+a reasonable amount of time, To form an idea of the amount of labour involved,
+‘we consider in the following, a simple problem involving two-dimensional Laplace
+equation.
+Consider the two-dimensional Laplace equation &
+ ay
+in the unit square OABC in the first quadrant with Dirichlet boundary condition,
+by finite difference method as shown in Fig. 1.1. The domain OABC is
+subdivided into a network by drawing straight lines x= jAx, y= kAy,
+jal2....MM+1, k=1,2...,N,N41, parallel to the coordinate
+axes. The points of intersection of these lines are known as mesh points
+The partial derivatives <5 and “are then approximately replaced by partial
+difference quotients at each mesh point. For example, we may write approximately Q
+
+In fact, assuming u(x, y) to be sufficiently smooth (that is, sufficient number of
+times continuously differentiable in the considered domain), itis possible to write,
+using Taylor's expansion about the point (x, y)
+
+where &, & are points in the intervals (x, x + Ax)and in (x — Ax, x) respectively.
+In view of the smoothness of u(x, y), the derivatives of « are bounded, and the term
+in the square bracket on the right side of Eg, , known as the truncation error 24
+term, may be rewritten as O(Ax?), representing a quantity of the order of Ax? this
+means that it a quantity which when divided by Ax?, tends to a finite nonzero
+limit as Ax —> 0, In finite difference notation, it is customary to write
+
+“This is central difference representation for the second derivative, Since the values, v
+‘of w at three abscissa points j +1, j, j — | are involved, itis called three-point
+central difference formula, Similarly, itis possible to express  Eqs. and be replaced by the corresponding first
+terms on the right, a truncation errors committed which is of the second order, that
+is, proportional to the square of the mesh lengths Ax or Ay. Itis called truncation Q
+
+error because it arises through the truncation of an infinitesimal or limiting process
+by a finite one
+Substituting Eqs. and in Eq, and neglecting the truncation error
+terms for the present, the following linear algebraic equation is obtained for the
+‘mesh point (j, &)
+
+‘n-unknowns.It is not difficult to prove that the coefficient determinant of the system
+of equations does not vanish,
+Now, suppose we wish to obtain results correct to three-decimal places and wish
+to know, what should be the mesh sizes Ax, Ay so that this could be achieved
+For the sake of simplicity, assume Ax = Ay; then we should have the neglected 25
+truncation error
+ number of mesh points, Noting
+that one of the most economical elimination methods for solving linear systems
+requites approximately “number of multiplications and divisions it follows that
+for solving the system of Eg,  the number of multiplication and division needed “a
+is at least
+which is a huge number, essentially requiring evaluation with the help of a powerful
+digital computer. These days in CFD, itis common to demand accuracy greater than
+thee decimal places and often six-decimal place accuracy is required for many
+design problems and applications. This would mean significantly greater number Q
+of operations requiring more powerful computers, in order that we may be able 10
+solve a typical CFD problem in @ reasonable amount of time.
+
+Introduction and Mathematical Preliminaries °
+1.2 TYPICAL PARTIAL DIFFERENTIAL EQUATIONS
+IN FLUID DYNAMICS
+“The principles of conservation of mass, momentum and energy flux constitute the
+basic principles of fluid flow and deliver the requisite number of partial differential
+equations. If the fluid is assumed to be inviscid, then Euler equations are the
+governing equations. In vector notation, assuming no external body forces, heat
+‘or energy supply, the Euler equations are (Landau and Lifshitz, 1989; Oswatitsch
+1956; Niyogi, 1977)
+where R isa universal constant, Tis the absolute temparature and m is the molar a
+mass of the fluid medium, At normal temperature and pressure
+R = 1.986 cal/e°C = 8.31 Joule/g°C,
+For oxygen m = 32, for nitrogen m = 28 and for air m = 29.0. v
+‘At very high speeds (hypersonic flow), the temperature can become very high
+and dissociation and ionization take place. In such cases also, one can work with an
+equation of the form , although with a smaller value of m. Equations
+, together with Eg. 0.13) or Eg constitute the governing equations for Q
+
+ Introduction to Computational Fluid Dynamics
+inviscid fluid flow. In three dimensions, these constitute a system of five first-order
+‘nonlinear partial differential equations and one thermodynamic relation for the six
+unknowns, namely, the three velocity components (for Cartesian coordinates these
+are usually denoted by, vand.), the pressure p, density p and the specific entropy
+s.Foraspecific uid flow problem, appropriate initial and boundary conditions must
+be prescribed. For example, at solid body, itis required that the normal velocity
+‘must vanish relative to the body,
+ALa boundary between two immiscible fluids the pressure and the velocity
+component normal to the surface of separation must be the same for the two fluids.
+Moreover, each of these velocity components must be equal to the corresponding
+component of the velocity of the surface.
+‘A detailed discussion on the basic equations of fluid dynamics, together with
+different kinds of boundary and/or initial conditions may be found in Chapter 7
+If further, the Nuid is assumed to be incompressible then the density p is constant
+throughout the fluid, The Euler equations may then be simplified to
+V-G=0, continuity,
+88 gm} =—Avp, momentum Mm
+art G-VM=—FVP, momentum tux. 6
+“The equations are particularly simple for ‘rotational flow for which
+everywhere in the flow field, A velocity potential g exists then, such that
+G=Vo 27
+and the continuity equation reduces to
+vp =0, (19)
+y? 598
+where V? denotes the Laplacian operator
+For steady inviscid isentropic irrotational flow the governing equation is the
+gas dynamic equation (see Chapter 7)
+vio=tve ¥(50°) (120) a
+‘where the local sound speed cis given by the Bernoulli equation
+P+ ag +d, (any v
+y-l y-1
+suffix 90 denoting free-stream condition, y being the ratio of the specific heats
+y= Cp/Cy Q
+
+
+1.3. TYPES OF SECOND-ORDER EQUATIONS
+‘We consider partial differential equations of the form: 598
+
+‘At point P(x, y) in the domain 2, Eq, is classified into three different
+types depending on the values of a, b, c, which may vary from point to point in
+2. Lis said to be of elliptic, parabolic and hyperbolic type at a point according as:
+elliptic type if ac— b> 0,
+parabolic type if ac~ b= 0,
+and hyperbolic type if ac —B? < 0.
+1.3.1 Characteristics of Second-Order Equations &
+Consider a second-order partial differential equation
+
+Introduction and Mathematical Preininaries &
+equation gives two values for the slope 2 of the required curve C,
+corresponding to which the higher derivatives of u ‘become indeterminate . These
+directions are known as the characteristic directions, ‘Then Ei, delivers
+the compatibility condition, which must be satisfied along the characteristics (see
+Chapter 4, Section 4.9), For
+Solving Eq. as a quadratic equation in 7A we get
+‘This shows that a pair of real characteristic directions exist for b? > ac, that is,
+for equations of hyperbolic type, while parabolic type equations have only one real
+characteristic, and elliptic type equations have no real characteristics
+| Example
+Consider Laplace equation in two dimensions
+Pu Pw
+Here a=1=c, b=0. So, ac—b? =1>0, at all points of the domain,
+Hence the Laplace equation is of elliptic type. In this equation, x and y
+axe independent space directions. Since two space dimensions are involved, itis
+said to be two-dimensional Laplace equation.
+Laplace equation occurs abundantly in science and engineering, Steady-state
+potential problems are governed by Laplace equation, 30
+
+
+4 Introduction to Computational Fluid Dynamics
+
+1.4 WELL-POSED PROBLEMS
+We are often interested in finding solution of special problems for partial differential
+equations which satisfy certain additional conditions, as we see in the above Q
+examples. This is contrary to the usual approach for ordinary differential equations
+where we first look for general solutions and then find special solutions satisfying
+certain initial conditions and/or boundary conditions. Additional conditions like Q
+initial and/or boundary conditions are associated with partial differential equations.
+The set of initial and/or boundary conditions together with the partial differential
+‘equation constitute a problem. It is important to note that these additional conditions
+
+
+Introduction and Mathematical Preliminaries ”
+1.4.1 Examples of Well-Posed Problems
+1. Dirichlet problem for the Laplace equation is well-posed, We state the
+result formally, without proof, using the notation that w € C? means that
+wis continuous in the given domain and u  C/ means that w is j-times
+continuously differentiable in the domain.
+Poisson's Theorem: If g(x) € C? on |x| = R, then for > 2
+Ra |x? ask) k
+Sf 80) as, for |x| < R,
+n(x) = | Roy Ln yp a for bl
+408) for x|=R
+belongs to C? in |x| < R, to C? in |x| < R and w(x) is a solution of the
+problem
+Ayu =0, —— for|xl < R,
+usa), forlsl = Ry
+‘where © is the solid angle in n dimensions
+_ ant
+“Tap
+and x andy are the n-component vectors x= (x1, ¥2) 00+ .%)e Y= 34
+(1 Yov--++ Je)» Ay denoting the Laplacian in » dimensions
+42 Da Sana dS
+att oF ag 598
+‘The problem is well-posed.
+2. For the heat conduction problem, the result may be stated as follows
+Let g(x) € C" in Ry and | f(«)| < M exp x2), with constants M, K >
+0. Then a
+Vf 0-9 eeyydy, fo 7
+wane zeal s0)dy, BO<FET. Gp)
+a), for = 0, y
+where T < zb, is a solution of the heat conduction problem
+au _ &u
+oN in -xo<x<o, O<r<T, (14D
+a oe Q
+with initial condition
+
+8 Introduction to Compuatational Fluid Dynamics
+“The problem is well-posed,
+
+
+1.5 PROPERTIES OF LINEAR AND QUASILINEAR EQUATIONS
+The theory of linear and quasilinear partial differential equations is a well-developed v
+discipline of mathematical analysis. In this section, we state without proof some
+basic qualitative properties of second order linear and quasilinear partial differential
+equations. These properties are useful in our subsequent studies of CFD. For a
+detailed discussion and proofs of the properties the references Courant and Hilbert Q
+(1953), Hellwig (1964), Du Chateau and Zachman (1986), Prasad and Ravindran
+(1985), may be consulted
+
+1.5.1 Qualitative Properties of Partial Differential Equations
+1. Lotus consider a second-order linear partial differential equation
+Llu) +duy teu + fuse
+where Llu] = ates + 2b ty + Cys
+in a given domain Q. If Eq, be of elliptic type and the coefficients be
+analytic functions of x and y in the given domain §2 then the solution must
+also be analytic
+Ton the other hand, the coefficients satisfy a Hilder condition (or have
+derivatives of order & satisfying Hilder conditions) then the solution has
+second derivatives satisfying a Hélder condition (or have derivatives up to
+order k + 2 satisfying a Hilder condition), It may be noted that a function f is
+said to satisfy a HOlder condition with constant % and exponent a, 0< a < 1,
+it
+F(P)— f(Q) = xPO”
+It may be mentioned that if, for example, the coefficients are continuous but
+not Hilder continuous, no twice continuously differentiable solution need
+exist,
+Simitar results hold for quasilinear equations
+2. A basic property of a linear elliptic type partial differential equation is the
+maximum-minimum principle, Wt states that, if f <0 and g > 0, a solution 36
+of Eq, defined in a domain &, cannot have a positive maximum (or a
+negative minimum) at an interior point unless itis a constant. A consequence
+of the maximum principle is that the Dirichlet problem for an elliptic type 598
+‘equation , with f < 0, has at mostone solution. The maximum principle
+also holds for quasilinear equations
+3. The solution of an equation of hyperbolic type with analytic coefficients
+need not be analytic, Discontinuities in the higher derivatives of the solution a
+‘are propagated along the characteristic curves. For quasilinear equations
+of hyperbolic type, solutions with stronger discontinuity in the form of
+shiocks may exist, across which the unknown function experiences a jump ¥
+discontinuity.
+4, For parabolic {ype equations also the maximum-minimum principle hold
+Heat conduction equation and other parabolic type equations with smooth
+coefficients satisfy a maximum-minimum principle. Let & be a bounded Q
+region in R° (three-dimensional Euclidian space) with a smooth closed surface
+S as boundary. Assuming u(x, y, 2, £) continuous in the domain @, consisting
+of and its boundary and let 0 < 1 < T,, where T is some fixed value. Let,
+
+
+in Q al the initial time ¢ = 0, and further m = min(m, m,). Similarly, let
+M, and M, denote the corresponding maxima of and M = max(M,, My)
+Then the maximum-minimum principle states that a solution u(x, y, 25) of
+the 3-D heat conduction equation in the domain consisting of the Cartesian
+product @ x (0,7)
+uy Vu =0
+satisfies the condition
+ms<u<M ash
+The wave equation or hyperbolic type equations do not exhibit any kind of
+‘maximum-minimum principle. On the other hand, the more important qualitative
+properties of hyperbolic type equations originate from the existence of real
+Characteristics. These properties and discussed in the subsequent sections,
+1.6 PHYSICAL CHARACTER OF SUBSONIC
+AND SUPERSONIC FLOWS
+As previously pointed out, the physical character of a flow field is closely related
+to the type of the governing partial differential equations. At sufficiently low
+speeds a fluid medium irrespective of whether it isa liquid or a gas, behaves as
+an incompressible fluid, for which the density may be taken to be constant, The
+continuity equation for irrotational flow then reduces to the Laplace equation, which 37
+is of elliptic type. ‘This means that small pressure variations are instantaneously
+propagated in all directions with infinite speed, In other words, the concept of
+incompressible fluid does not take into account the fact that pressure variations
+propagate in the fluid with a finite speed 598
+Let us consider flows produced by small disturbances in an inviseid fluid, Since
+4 small pressure change is propagated with the speed of sound, itis evident that
+the effect of pressure changes produced, for example, in the air by a body moving
+faster than the speed of sound cannot reach points ahead of the body. It may be said a
+that the body is unable to send signals ahead, There is a fundamental difference
+between subsonic and supersonic motion, We consider in the following a well
+known example due to von Karman (1941) v
+‘Consider the case of subsonic motion, for example, the uniform level flight of
+an aieraft. In this case a pressure signal travels ahead at sound speed minus the
+fight speed relative to the aircraft whereas a signal travels backward at a speed
+equal (0 the sum of the flight and sound speeds. ‘Thus, although the mechanism of
+signal, provided of course that the light started at a sufficiently distant point. This,
+is not so in the case of a supersonic flight. To see this, let us take the simplest case Q
+
+
+Introduction and Mathematical Preliminaries 
+
+2 Introduction to Computational Fluid Dynamics
+is of hyperbolic type. The characteristics separate out the disturbed region from
+the undisturbed one. The region outside the Mach cone is undisturbed and all the
+disturbances produced by the source are confined within the conical region, which
+is the zone of disturbance. Taking the current position of the source S moving with
+speed U(> c), unit time before the source was situated at the position indicated by
+= and two units time before at the position —2 also shown as the point A. ‘The
+disturbances produced by the source at A spread with the local speed of sound c
+and remain confined within sphere of radius AB = 2c. The semi-vertical angle a
+is known as the Mach angle. It may be noted that the sine of the semi-vertex angle
+of the Mach cone is equal o the reciprocal of the Mach number, as may be seen
+
+‘Thus we see that in a subsonic flow, the disturbances propagate in all directions
+and theoretically can reach infinity although, in principle, the disturbances become
+‘weaker as the distance from the source increases. This is typical of flow fields
+governed by elliptic partial differential equations. In the case of supersonic flows,
+the disturbances do not propagate in all directions but remain confined within
+the Mach cone, which is the range of influence of the source. This is typical of
+hyperbolic partial differential equations, For the sonic case, . Flows governed by parabolic partial differential
+equations exhibit such a behaviour
+When constructing finite difference representation of partial differential
+equations, itis helpful to note the differences among the above three types of A
+influences of a disturbance, It is desirable that the finite difference model for a
+partial differential equation should reflect the type of influence corresponding to
+the type of the partial differential equation.
+
+1.7 SECOND-ORDER WAVE EQUATION
+The standard linear second order partial differential equation of hyperbolic type in
+two independent variables, namely, the physical space «and the time # the wave Q
+equation

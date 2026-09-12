@@ -1,0 +1,8 @@
+google-genai
+chromadb
+pymupdf
+pillow
+python-pptx
+streamlit
+python-dotenv
+sentence-transformers

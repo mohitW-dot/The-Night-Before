@@ -1,0 +1,7 @@
+.env
+.venv/
+venv/
+venv-python39-backup/
+__pycache__/
+data/
+*.pyc

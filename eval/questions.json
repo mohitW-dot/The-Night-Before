@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "question": "What is Computational Fluid Dynamics (CFD), and which two physical phenomena does it primarily simulate?",
+    "type": "single_doc",
+    "expected_doc": "UNIT-1#Introduction.pdf",
+    "expected_page": 5
+  },
+  {
+    "id": 2,
+    "question": "List the three main phases of a CFD simulation and one key task performed in each phase.",
+    "type": "single_doc",
+    "expected_doc": "UNIT-1#Introduction.pdf",
+    "expected_page": 8
+  },
+  {
+    "id": 3,
+    "question": "State the Reynolds number equation and explain how laminar and turbulent flow are classified.",
+    "type": "single_doc",
+    "expected_doc": "Handwritten notes",
+    "expected_page": 1
+  },
+  {
+    "id": 4,
+    "question": "Write the general transport equation and identify its transient, advective, source, and diffusion terms.",
+    "type": "single_doc",
+    "expected_doc": "UNIT-1#Introduction.pdf",
+    "expected_page": 9
+  },
+  {
+    "id": 5,
+    "question": "Write the mass conservation equation in differential form and define the velocity components u, v, and w.",
+    "type": "single_doc",
+    "expected_doc": "UNIT-1#Introduction.pdf",
+    "expected_page": 10
+  },
+  {
+    "id": 6,
+    "question": "Derive the central difference formula for the first-order derivative using Taylor series expansion.",
+    "type": "single_doc",
+    "expected_doc": "UNIT-2#Finite Difference Method.pptx",
+    "expected_page": 5
+  },
+  {
+    "id": 7,
+    "question": "Write the finite difference equation for the second-order derivative in one-dimensional space.",
+    "type": "single_doc",
+    "expected_doc": "UNIT-2#Finite Difference Method.pptx",
+    "expected_page": 6
+  },
+  {
+    "id": 8,
+    "question": "According to the handwritten notes, classify second-order PDEs using the discriminant method and define elliptic, parabolic, and hyperbolic equations.",
+    "type": "single_doc",
+    "expected_doc": "handwritten",
+    "expected_page": 3
+  },
+  {
+    "id": 9,
+    "question": "Using the handwritten notes, explain the eigenvalue approach for classifying second-order PDEs.",
+    "type": "single_doc",
+    "expected_doc": "handwritten",
+    "expected_page": 4
+  },
+  {
+    "id": 10,
+    "question": "State the governing equation and boundary conditions for one-dimensional steady-state heat conduction with a uniform heat source.",
+    "type": "single_doc",
+    "expected_doc": "UNIT-2#Finite Difference Method.pptx",
+    "expected_page": 16
+  },
+  {
+    "id": 11,
+    "question": "Explain how Reynolds number is used during CFD pre-processing to select the appropriate physical flow model.",
+    "type": "cross_doc",
+    "expected_docs": [
+      "UNIT-1#Introduction.pdf p.8",
+      "handwritten p.1"
+    ]
+  },
+  {
+    "id": 12,
+    "question": "Describe the complete CFD workflow from geometry creation to visualization, and explain how the solver converts governing PDEs into algebraic equations.",
+    "type": "cross_doc",
+    "expected_docs": [
+      "UNIT-1#Introduction.pdf p.8",
+      "handwritten p.1"
+    ]
+  },
+  {
+    "id": 13,
+    "question": "Compare the discriminant method and the eigenvalue method for classifying second-order PDEs.",
+    "type": "cross_doc",
+    "expected_docs": [
+      "handwritten p.3",
+      "handwritten p.4"
+    ]
+  },
+  {
+    "id": 14,
+    "question": "Explain how the EulerTricomi equation changes from hyperbolic to elliptic form, using both discriminant and eigenvalue interpretations.",
+    "type": "cross_doc",
+    "expected_docs": [
+      "handwritten p.3",
+      "handwritten p.4"
+    ]
+  },
+  {
+    "id": 15,
+    "question": "Describe the derivation of the central difference formula from Taylor series and show how it is applied to discretize a second-order derivative.",
+    "type": "cross_doc",
+    "expected_docs": [
+      "UNIT-2#Finite Difference Method.pptx p.5",
+      "UNIT-2#Finite Difference Method.pptx p.6"
+    ]
+  },
+  {
+    "id": 16,
+    "question": "Explain the difference between forward, backward, and central difference schemes, and identify which scheme is used for discretizing the heat conduction equation.",
+    "type": "cross_doc",
+    "expected_docs": [
+      "UNIT-2#Finite Difference Method.pptx p.5",
+      "UNIT-2#Finite Difference Method.pptx p.17"
+    ]
+  },
+  {
+    "id": 17,
+    "question": "Formulate the finite difference equations for one-dimensional steady-state heat conduction and explain how they are solved using Gauss elimination.",
+    "type": "cross_doc",
+    "expected_docs": [
+      "UNIT-2#Finite Difference Method.pptx p.17",
+      "UNIT-2#Finite Difference Method.pptx p.18"
+    ]
+  },
+  {
+    "id": 18,
+    "question": "Compare Gauss-Seidel and Gauss Elimination methods, highlighting the iterative and direct solution procedures.",
+    "type": "cross_doc",
+    "expected_docs": [
+      "UNIT-2#Finite Difference Method.pptx p.9",
+      "UNIT-2#Finite Difference Method.pptx p.11"
+    ]
+  },
+  {
+    "id": 19,
+    "question": "Explain how boundary conditions are applied in both the governing differential equations and the finite difference heat conduction formulation.",
+    "type": "cross_doc",
+    "expected_docs": [
+      "UNIT-1#Introduction.pdf p.23",
+      "UNIT-2#Finite Difference Method.pptx p.16"
+    ]
+  },
+  {
+    "id": 20,
+    "question": "Using the handwritten notes and the lecture material, explain how discretization transforms governing PDEs into algebraic equations during CFD analysis.",
+    "type": "cross_doc",
+    "expected_docs": [
+      "handwritten p.1",
+      "UNIT-2#Finite Difference Method.pptx p.5"
+    ]
+  },
+  {
+    "id": 21,
+    "question": "Explain the SIMPLE algorithm for pressure velocity coupling in incompressible flow.",
+    "type": "unanswerable"
+  },
+  {
+    "id": 22,
+    "question": "Derive the QUICK differencing scheme used in finite volume methods.",
+    "type": "unanswerable"
+  },
+  {
+    "id": 23,
+    "question": "What is the k-epsilon turbulence model and where is it applied?",
+    "type": "unanswerable"
+  },
+  {
+    "id": 24,
+    "question": "Explain the PISO algorithm and compare it with SIMPLE.",
+    "type": "unanswerable"
+  },
+  {
+    "id": 25,
+    "question": "Derive the Navier Stokes equation in cylindrical coordinates.",
+    "type": "unanswerable"
+  },
+  {
+    "id": 26,
+    "question": "Explain the finite volume method and compare it with the finite difference method.",
+    "type": "unanswerable"
+  },
+  {
+    "id": 27,
+    "question": "What is Large Eddy Simulation (LES), and how does it differ from DNS?",
+    "type": "unanswerable"
+  },
+  {
+    "id": 28,
+    "question": "Explain the Spalart Allmaras turbulence model and its industrial applications.",
+    "type": "unanswerable"
+  },
+  {
+    "id": 29,
+    "question": "Describe adaptive mesh refinement (AMR) and its advantages in CFD.",
+    "type": "unanswerable"
+  },
+  {
+    "id": 30,
+    "question": "Explain the Volume of Fluid (VOF) method for multiphase flow simulation.",
+    "type": "unanswerable"
+  }
+]
