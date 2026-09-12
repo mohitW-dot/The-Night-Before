@@ -85,59 +85,83 @@ streamlit run app.py
 - Correctly refused: **8 / 10**
 
 
-### Architecture
+## 🏗️ Architecture
 
-corpus/
-(PDFs, slides, handwritten photos, notes)
-        │
-        ▼
-   ingest.py
-        │
-        ├── Text extraction
-        ├── Handwriting OCR
-        └── Visual description
-        │
-        ▼
-data/chunks.json
-        │
-        ▼
-    index.py
-        │
-        └── Local embeddings
-        │
-        ▼
-data/chroma_db/
-        │
-        │
-        ▼
-   retrieve.py ◄──────────► app.py
-        │                    │
-        │                    └── Streamlit UI
-        │
-        ▼
-   Relevant Context
-        │
-        ▼
-   Gemini API
-        │
-        ├──────────────► Answer + Citations
-        │
-        └──────────────► Grounded Quiz
-        │
-        ▼
- memory.py
-        │
-        ▼
-data/memory.db
-(Session memory, coverage, quiz source)
-        
-        │
-        ▼
-     eval.py
-        │
-        ▼
-eval/results.json
-(Accuracy + refusal scorecard)
+```text
+                         ┌─────────────────────────┐
+                         │       corpus/           │
+                         │                         │
+                         │ PDFs / Slides / Notes   │
+                         │ Handwritten Photos      │
+                         └────────────┬────────────┘
+                                      │
+                                      ▼
+                              ┌───────────────┐
+                              │   ingest.py   │
+                              │               │
+                              │ Text + OCR +  │
+                              │ descriptions  │
+                              └───────┬───────┘
+                                      │
+                                      ▼
+                              ┌────────────────┐
+                              │ data/          │
+                              │ chunks.json    │
+                              └───────┬────────┘
+                                      │
+                                      ▼
+                              ┌───────────────┐
+                              │   index.py    │
+                              │               │
+                              │ Local BGE     │
+                              │ embeddings    │
+                              └───────┬───────┘
+                                      │
+                                      ▼
+                              ┌────────────────┐
+                              │ data/chroma_db │
+                              │ Vector Store   │
+                              └───────┬────────┘
+                                      │
+                                      ▼
+                              ┌───────────────┐
+                              │  retrieve.py  │
+                              └───────┬───────┘
+                                      │
+                         ┌────────────┴────────────┐
+                         │                         │
+                         ▼                         ▼
+                  ┌──────────────┐          ┌──────────────┐
+                  │    app.py    │          │  memory.py   │
+                  │  Streamlit   │          │    SQLite    │
+                  │     UI       │          │    Memory    │
+                  └──────┬───────┘          └──────┬───────┘
+                         │                         │
+                         └────────────┬────────────┘
+                                      │
+                                      ▼
+                              ┌───────────────┐
+                              │  Gemini API   │
+                              │ Grounded LLM  │
+                              └───────┬───────┘
+                                      │
+                                      ▼
+                           ┌────────────────────┐
+                           │ Answer + Citations │
+                           │ Grounded Quiz      │
+                           └─────────┬──────────┘
+                                     │
+                                     ▼
+                              ┌──────────────┐
+                              │   eval.py    │
+                              └──────┬───────┘
+                                     │
+                                     ▼
+                            ┌──────────────────┐
+                            │ eval/results.json│
+                            │    Scorecard     │
+                            └──────────────────┘
+```
 
 ## What's beyond the floor
 
