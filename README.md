@@ -1,94 +1,37 @@
-# The Night Before
+# 📚 The Night Before
 
-A study tool that answers only from your uploaded lecture PDFs, slides, notes,
-and handwritten photos — with page-level citations, honest refusal when your
-materials don't cover something, and persistent session memory so it behaves
-like a study companion rather than a one-shot search box.
+> **A grounded AI study companion that answers strictly from your own course material.**
 
-**100% free stack** — no paid APIs, no credit card required.
+**The Night Before** is a document-grounded study assistant designed for students preparing for exams using lecture PDFs, PowerPoint slides, notes, and handwritten material.
 
-## Stack
+Instead of relying on general internet knowledge, the system retrieves relevant content **only from the user's uploaded study material**, generates answers grounded in that content, and provides **page-level source citations**.
 
-| Layer | Tool | Cost |
-|---|---|---|
-| Answering / handwriting OCR / quiz generation | Gemini API (`gemini-3.6-flash`) | Free tier |
-| Embeddings | Sentence Transformers (`bge-large-en-v1.5`), local | Free |
-| Vector database | ChromaDB, local | Free |
-| PDF parsing | PyMuPDF | Free |
-| Slide parsing | python-pptx | Free |
-| Session memory | SQLite | Free |
-| UI | Streamlit | Free |
+It also supports handwritten notes, persistent study-session memory, grounded quiz generation, and study-coverage tracking.
 
-## Setup
+---
 
-1. Get a free Gemini API key at [aistudio.google.com](https://aistudio.google.com).
-2. Clone this repo and install dependencies:
-   ```bash
-   python3.11 -m venv venv
-   source venv/bin/activate   # Windows: venv\Scripts\activate
-   python -m pip install --upgrade pip
-   python -m pip install -r requirements.txt
-   ```
-3. Copy `.env.example` to `.env` and paste in your key:
-   ```
-   GOOGLE_API_KEY=your-key-here
-   ```
-4. Drop your own course material into `corpus/`:
-   - `corpus/pdfs/` — lecture PDFs
-   - `corpus/slides/` — .pptx decks
-   - `corpus/notes/` — .md or .txt files
-   - `corpus/handwritten/` — photos of handwritten pages (.jpg/.png)
+## ✨ Key Features
 
-## Build the index
+### 📖 Material-Grounded Answers
 
-```bash
-python ingest.py     # extracts text + transcribes handwritten photos via Gemini vision
-python index.py       # chunks + embeds locally + writes to ChromaDB
-```
+Ask questions about your course material and receive answers based only on the uploaded documents.
 
-After `ingest.py` runs, **manually skim `data/chunks.json`**, especially the
-`"doc_type": "handwritten"` entries, to sanity-check transcription quality
-before indexing.
+Supported material:
 
-## Run the app
+- Lecture PDFs
+- PowerPoint slides
+- Markdown / text notes
+- Handwritten notes and photos
 
-```bash
-streamlit run app.py
-```
+If the answer cannot be supported by the uploaded material, the system **refuses rather than hallucinating an answer**.
 
-## Run the evaluation
+---
 
-1. Fill in your 30 hand-labeled questions in `eval/questions.json`
-   (10 single-document, 10 cross-document, 10 unanswerable), recording the
-   correct source page for each by hand.
-2. Run:
-   ```bash
-   python eval.py
-   ```
-3. Results and a scorecard are written to `eval/results.json` and printed to
-   console.
+### 🔎 Page-Level Citations
 
-### Scorecard (fill in after running eval.py)
+Every grounded answer identifies the source material used to generate it.
 
-- Correct with source: **16 / 20**
-- Correctly refused: **8 / 10**
+Example:
 
-## What's beyond the floor
-
-- **Persistent session memory** (`memory.py`, SQLite) — follow-up questions
-  resolve using recent conversation context, not just the current message.
-- **Coverage tracker** (sidebar) — shows which document pages have actually
-  been discussed this session, surfacing untouched material.
-- **Grounded quiz generation** — generates practice questions strictly from
-  material cited in your recent answers, not generic trivia.
-- **Handwriting transparency** — any answer citing a handwritten page shows
-  both the Gemini transcription and the original photo, so you can judge
-  transcription quality yourself rather than trust it blindly.
-
-## Known limitations
-
-- Handwriting transcription quality depends on photo clarity — the
-  deliberately hard-to-read scan in this corpus is included to demonstrate
-  this honestly rather than hide it.
-- Gemini's free tier has per-minute rate limits; `ingest.py` includes short
-  sleeps between vision calls to stay under them.
+```text
+Source: UNIT-1 — Introduction, Page 12
