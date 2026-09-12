@@ -84,9 +84,8 @@ streamlit run app.py
 - Correct with source: **16 / 20**
 - Correctly refused: **8 / 10**
 
-_(fill these in after running `eval.py` on your real corpus)_
 
-Architecture
+### Architecture
 
 corpus/
 (PDFs, slides, handwritten photos, notes)
